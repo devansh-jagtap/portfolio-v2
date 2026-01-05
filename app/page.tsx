@@ -10,13 +10,8 @@ import BlogList from "../components/views/BlogList";
 import BlogDetail from "../components/views/BlogDetail";
 import { Project, BlogPost } from "../types";
 import { AnimatePresence } from "framer-motion";
-
 import { useTheme } from "next-themes";
-
 import Experience from "../components/views/Experience";
-
-import Experiments from "../components/views/Experiments";
-import ExperimentDetail from "../components/views/ExperimentDetail";
 import { PlaygroundItem } from "../types";
 
 export default function Page() {
@@ -125,26 +120,6 @@ export default function Page() {
             isDark={isDark}
             handleBack={() => handleNav("blog")}
           />
-        )}
-        {view === "experiments" && (
-            <Experiments 
-                key="experiments" 
-                handleNav={handleNav} 
-                handleExperimentClick={handleExperimentClick}
-                borderClass={borderClass}
-                mutedText={mutedText}
-                isDark={isDark}
-            />
-        )}
-        {view === "experiment-detail" && activeExperiment && (
-            <ExperimentDetail 
-                key="experiment-detail"
-                experiment={activeExperiment}
-                handleBack={() => handleNav("experiments")}
-                borderClass={borderClass}
-                mutedText={mutedText}
-                isDark={isDark}
-            />
         )}
       </AnimatePresence>
 
