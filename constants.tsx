@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       "Designed and developed the public-facing website for ROI Makers, a performance marketing agency. The project focused on creating a clean, modern, and responsive web presence that clearly communicates the agency’s services, approach, and brand identity. The site was built with performance, SEO fundamentals, and maintainability in mind.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    imageUrl: "/projects/roi-makers.png",
+    imageUrl: "/roi_makers.png",
     demoUrl: "https://roi-makers.vercel.app/",
     codeUrl:"https://github.com/devansh-jagtap/roi-makers",
     featured: true,
@@ -65,8 +65,8 @@ export const PROJECTS: Project[] = [
     longDescription:
       "Appliquo is a web application designed to help users manage and track their job applications in one place. The platform focuses on usability and clarity, allowing users to record application details, statuses, and notes while maintaining a clean and intuitive interface.",
     techStack: ["React.js", "Javascript", "Tailwind CSS"],
-    imageUrl: "/projects/appliquo.png",
-    demoUrl: "",
+    imageUrl: "/appliquo.png",
+    demoUrl: "https://appliquo.vercel.app/",
     codeUrl: "https://github.com/devansh-jagtap/Appliquo",
     featured: true,
     category: "Productivity",
