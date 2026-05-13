@@ -3,6 +3,9 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
+    // @ts-ignore - keydrop/init doesn't have TypeScript types
+    await import("keydrop/init");
+
     const token = process.env.GITHUB_TOKEN;
     if (!token) {
       console.warn("GITHUB_TOKEN is not set");
