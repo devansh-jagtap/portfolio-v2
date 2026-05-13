@@ -7,15 +7,24 @@ const GitHubGraph: React.FC = () => {
 
   useEffect(() => {
     fetch('/api/github')
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          return res.json().then((data) => {
+            throw new Error(data.details || data.error || `HTTP ${res.status}`);
+          });
+        }
+        return res.json();
+      })
       .then((data) => {
         if (data && !data.error && data.weeks) {
           setCalendar(data);
+        } else {
+          console.error("Invalid data format:", data);
         }
         setLoading(false); 
       })
       .catch((err) => {
-        console.error("Failed to load GitHub data", err);
+        console.error("Failed to load GitHub data:", err);
         setLoading(false);
       });
   }, []);
@@ -25,7 +34,16 @@ const GitHubGraph: React.FC = () => {
   }
 
   if (!calendar || !calendar.weeks) {
-    return <div className="text-sm text-neutral-500">Failed to load GitHub data.</div>;
+    return (
+      <div className="p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+        <p className="text-sm text-yellow-800 dark:text-yellow-200">
+          Unable to load GitHub contribution data. Check console for details.
+        </p>
+        <p className="text-xs text-yellow-700 dark:text-yellow-300 mt-1">
+          Ensure GITHUB_TOKEN is configured in your environment.
+        </p>
+      </div>
+    );
   }
 
   return (
