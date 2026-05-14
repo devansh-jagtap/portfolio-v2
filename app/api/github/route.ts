@@ -1,8 +1,10 @@
 import { getContributionData } from "@/lib/github";
 import { NextResponse } from "next/server";
 
+
 export async function GET() {
   try {
+    
     const token = process.env.GITHUB_TOKEN;
     if (!token) {
       console.warn("GITHUB_TOKEN is not set");
