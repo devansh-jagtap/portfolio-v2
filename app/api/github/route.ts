@@ -1,11 +1,8 @@
 import { getContributionData } from "@/lib/github";
 import { NextResponse } from "next/server";
-import { initKeydrop } from "keydrop";
 
 export async function GET() {
   try {
-
-    await initKeydrop();
     const token = process.env.GITHUB_TOKEN;
     if (!token) {
       console.warn("GITHUB_TOKEN is not set");
