@@ -24,20 +24,22 @@ interface ContributionGraphProps {
 export default function ContributionGraph({ calendar }: ContributionGraphProps) {
 
   const getIntensity = (count: number) => {
-    if (count === 0) return 0;
-    if (count < 3) return 1;
-    if (count < 7) return 2;
-    return 3;
-  };
+   if (count === 0) return 0; 
+  if(count === 1) return 1
+  if (count < 3) return 2; 
+  if (count < 7) return 3; 
+  return 4; 
+}; 
 
-  const getColor = (level: number) => {
-    switch (level) {
-      case 3: return 'bg-purple-500';
-      case 2: return 'bg-purple-500/70';
-      case 1: return 'bg-purple-500/30';
-      default: return 'bg-purple-500/20';
-    }
-  };
+const getColor = (level: number) => { 
+  switch (level) { 
+    case 4: return 'bg-purple-500';      
+    case 3: return 'bg-purple-500/90';    
+    case 2: return 'bg-purple-500/70'; 
+    case 1 : return 'bg-purple-500/70';  
+    default: return 'bg-purple-400/30';  
+  } 
+};
 
   if (!calendar?.weeks) {
     return <div className="text-sm text-neutral-500">No contribution data available.</div>;

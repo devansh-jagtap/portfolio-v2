@@ -1,12 +1,13 @@
 import { getContributionData } from "@/lib/github";
 import { NextResponse } from "next/server";
-
+import { init } from "keydrop";
 
 export async function GET() {
   try {
     
     const token = process.env.GITHUB_TOKEN;
     if (!token) {
+       await init();
       console.warn("GITHUB_TOKEN is not set");
       return NextResponse.json(
         { error: "GitHub token not configured", details: "GITHUB_TOKEN environment variable is missing" },
