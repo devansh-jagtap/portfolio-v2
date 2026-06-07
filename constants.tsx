@@ -27,6 +27,48 @@ export const EXPERIENCE: Experience[] = [
 ];
 export const PROJECTS: Project[] = [
   {
+    slug: "keydrop",
+    title: "KeyDrop — Secrets Management CLI Tool",
+    description:
+      "Turn your entire .env file into one secure deployable key with a full-stack CLI + API + SDK platform.",
+    longDescription:
+      "KeyDrop is a full-stack secrets management platform built to help developers securely manage and deploy environment variables across teams and projects. It combines a Node.js CLI, runtime SDK, backend API, and web dashboard with encrypted secret handling and browser-based authentication flow similar to npm and GitHub CLI.",
+    techStack: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "JWT",
+      "AES-256-GCM"
+    ],
+    demoUrl: "https://keydrop-orcin.vercel.app",
+    codeUrl: "https://github.com/devansh-jagtap/keydrop",
+    featured: true,
+    category: "Developer Tools",
+    ctaText: "View Project",
+    ctaLink: "https://keydrop-orcin.vercel.app",
+    features: [
+      "2 npm packages published",
+      "4 API endpoints for auth flow",
+      "AES-256-GCM encryption",
+      "JWT auth with 24h expiry",
+      "3 part monorepo architecture",
+      "Full stack — CLI + API + SDK + Website"
+    ],
+    highlights: [
+      "Built browser-based CLI login flow with token polling and handshake lifecycle",
+      "Shipped production deployments on Render (API) and Vercel (website)",
+      "Added team collaboration, one-time key reveal, and key recovery workflows"
+    ],
+    challenges: [
+      "Handling ESM/CJS compatibility for SDK usage across Node.js and Next.js",
+      "Integrating Prisma 7 with Neon serverless Postgres configuration"
+    ]
+  },
+  {
     slug: "roi-makers-website",
     title: "ROI Makers Website",
     description:
