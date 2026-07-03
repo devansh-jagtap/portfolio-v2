@@ -35,7 +35,17 @@ export async function getContributionData(username: string) {
   });
 
   if (!res.ok) {
-    throw new Error(`Failed to fetch GitHub data: ${res.statusText}`);
+    const responseBody = await res.text();
+
+    if (res.status === 401 || res.status === 403) {
+      throw new Error(
+        `GitHub token rejected by GitHub (${res.status} ${res.statusText}). Regenerate GITHUB_TOKEN and make sure it has access to the public profile data.`
+      );
+    }
+
+    throw new Error(
+      `Failed to fetch GitHub data: ${res.status} ${res.statusText}${responseBody ? ` - ${responseBody}` : ""}`
+    );
   }
 
   const json = await res.json();
