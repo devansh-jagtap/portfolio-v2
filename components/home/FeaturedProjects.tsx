@@ -18,7 +18,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
   handleProjectClick,
   handleNav
 }) => {
-  const featuredProjects = PROJECTS.filter(p => p.featured).slice(0, 2);
+  const featuredProjects = PROJECTS.filter(p => p.featured).slice(0, 4);
 
   return (
     <div className="grid grid-cols-1">
@@ -44,7 +44,7 @@ const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
                 {t}
               </span>
             ))}
-            {project.techStack.length > 4 && (
+            {project.techStack.length > 5 && (
               <span className={`text-[10px] uppercase tracking-wider px-2 py-1 border ${isDark ? 'border-neutral-800 bg-neutral-900' : 'border-neutral-200 bg-white'}`}>
                 +{project.techStack.length - 4}
               </span>

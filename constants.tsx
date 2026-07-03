@@ -137,7 +137,7 @@ export const PROJECTS: Project[] = [
       "LyricsType transforms typing practice into a more engaging experience by allowing users to type along with song lyrics. The goal of the project was to combine learning with entertainment while maintaining a smooth and responsive user interface.",
     techStack: ["Next.js", "JavaScript", "Tailwind CSS"],
     imageUrl: "/projects/lyricstype.png",
-    featured: false,
+    featured: true,
     category: "Learning & Fun",
     ctaText: "Explore",
     codeUrl:"https://github.com/devansh-jagtap/lyricstype",
@@ -250,16 +250,65 @@ export const PROJECTS: Project[] = [
 export const SKILLS: SkillCategory[] = [
   {
     category: "Languages",
-    skills: ["JavaScript", "Python", "C/C++", "SQL (Postgres)", "HTML/CSS"]
+    skills: [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "C++",
+      "SQL",
+    ],
   },
   {
-    category: "Frameworks",
-    skills: ["Next.js", "React", "Node.js", "Express.js", "Shadcn-UI"]
+    category: "Frontend",
+    skills: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Shadcn/UI",
+      "Framer Motion",
+    ],
   },
   {
-    category: "Tools & Libraries",
-    skills: ["Git","Vercel", "OpenAI", "Gemini", "Tailwind CSS"]
-  }
+    category: "Backend",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Prisma ORM",
+      "REST APIs",
+      "Authentication",
+    ],
+  },
+  {
+    category: "Databases",
+    skills: [
+      "PostgreSQL",
+      "MongoDB",
+      "Pinecone",
+      "MySQL"
+    ],
+  },
+  {
+    category: "AI Engineering",
+    skills: [
+      "OpenAI",
+      "Gemini",
+      "RAG",
+      "Embeddings",
+      "Vector Search",
+      "Prompt Engineering",
+      "AI SDK",
+    ],
+  },
+  {
+    category: "Tools",
+    skills: [
+      "Git",
+      "GitHub",
+      "Vercel",
+      "Postman",
+      "GCP",
+    ],
+  },
 ];
 
 export const EDUCATION = {

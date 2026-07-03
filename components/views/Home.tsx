@@ -8,6 +8,7 @@ import Profile from '../home/Profile';
 import FeaturedProjects from '../home/FeaturedProjects';
 import Skills from '../home/Skills';
 import Education from '../home/Education';
+import { EMAIL, PHONE } from '../../constants';
 
 interface HomeProps {
   borderClass: string;
@@ -67,14 +68,24 @@ const Home: React.FC<HomeProps> = ({
                     <GitHubGraph />
                   </div>
 
-                  {/* Contact Details Section */}
-                  <div className={`p-6 md:p-8 border-b ${borderClass}`}>
-                    <h3 className="font-serif italic text-2xl mb-4">Contact Details</h3>
-                    <div className="flex flex-col gap-2 text-base">
-                      <span>Email: <a href={`mailto:${require('../../constants').EMAIL}`} className="underline text-purple-600 dark:text-purple-400">{require('../../constants').EMAIL}</a></span>
-                      <span>Phone: <a href={`tel:${require('../../constants').PHONE}`} className="underline text-purple-600 dark:text-purple-400">{require('../../constants').PHONE}</a></span>
-                    </div>
+                {/* Contact Details */}
+                <div className={`p-6 md:p-8 border-b ${borderClass}`}>
+                  <h3 className="font-serif italic text-2xl mb-4">Contact Details</h3>
+                  <div className="flex flex-col gap-2 text-base">
+                    <span>
+                      Email:{' '}
+                      <a href={`mailto:${EMAIL}`} className="underline text-purple-600 dark:text-purple-400">
+                        {EMAIL}
+                      </a>
+                    </span>
+                    <span>
+                      Phone:{' '}
+                      <a href={`tel:${PHONE}`} className="underline text-purple-600 dark:text-purple-400">
+                        {PHONE}
+                      </a>
+                    </span>
                   </div>
+                </div>
             </div>
 
             {/* Right Column: Experience, Skills, Education */}
