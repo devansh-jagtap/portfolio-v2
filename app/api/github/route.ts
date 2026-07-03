@@ -2,6 +2,9 @@ import { getContributionData } from "@/lib/github";
 import { NextResponse } from "next/server";
 import { init } from "keydrop";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function GET() {
   try {
     

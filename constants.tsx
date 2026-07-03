@@ -28,7 +28,7 @@ export const EXPERIENCE: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     slug: "keydrop",
-    title: "KeyDrop — Secrets Management CLI Tool",
+    title: "KeyDrop Secrets Management CLI Tool",
     description:
       "Turn your entire .env file into one secure deployable key with a full-stack CLI + API + SDK platform.",
     longDescription:
@@ -44,19 +44,19 @@ export const PROJECTS: Project[] = [
       "JWT",
       "AES-256-GCM"
     ],
-    demoUrl: "https://keydrop-orcin.vercel.app",
+    demoUrl: "https://keydrops.tech",
     codeUrl: "https://github.com/devansh-jagtap/keydrop",
     featured: true,
     category: "Developer Tools",
     ctaText: "View Project",
-    ctaLink: "https://keydrop-orcin.vercel.app",
+    ctaLink: "https://keydrops.tech",
     features: [
       "2 npm packages published",
       "4 API endpoints for auth flow",
       "AES-256-GCM encryption",
       "JWT auth with 24h expiry",
       "3 part monorepo architecture",
-      "Full stack — CLI + API + SDK + Website"
+      "Full stack CLI + API + SDK + Website"
     ],
     highlights: [
       "Built browser-based CLI login flow with token polling and handshake lifecycle",
@@ -266,7 +266,7 @@ export const EDUCATION = {
   institution: "Chameli Devi Group of Institutions (CDGI)",
   degree: "B.Tech in Computer science Engineering",
   location: "Indore, India",
-  duration: "Aug. 2022 – Expected 2026"
+  duration: "Aug. 2022 – July 2026"
 };
 
 export const BLOG_POSTS: BlogPost[] = [

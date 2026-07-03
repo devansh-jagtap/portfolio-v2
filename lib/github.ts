@@ -31,7 +31,7 @@ export async function getContributionData(username: string) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ query, variables: { username } }),
-    next: { revalidate: 3600 }, // 1 hour cache
+    cache: "no-store",
   });
 
   if (!res.ok) {
