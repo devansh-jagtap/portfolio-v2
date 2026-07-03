@@ -6,7 +6,7 @@ const GitHubGraph: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/github')
+    fetch('/api/github', { cache: 'no-store' })
       .then((res) => {
         if (!res.ok) {
           return res.json().then((data) => {
