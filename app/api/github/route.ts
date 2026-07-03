@@ -1,6 +1,5 @@
 import { getContributionData } from "@/lib/github";
 import { NextResponse } from "next/server";
-import { init } from "keydrop";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -10,7 +9,6 @@ export async function GET() {
     
     const token = process.env.GITHUB_TOKEN;
     if (!token) {
-       await init();
       console.warn("GITHUB_TOKEN is not set");
       return NextResponse.json(
         { error: "GitHub token not configured", details: "GITHUB_TOKEN environment variable is missing" },
@@ -23,9 +21,10 @@ export async function GET() {
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : "Unknown error";
     console.error("GitHub API Error:", errorMessage);
+    const status = errorMessage.includes("GitHub token rejected") ? 401 : 500;
     return NextResponse.json(
       { error: "Failed to fetch GitHub data", details: errorMessage },
-      { status: 500 }
+      { status }
     );
   }
 }
