@@ -15,7 +15,7 @@ const Intro: React.FC<IntroProps> = ({ borderClass, mutedText, isDark }) => {
         Developer
       </h2>
       <p className={`text-base md:text-lg leading-relaxed ${mutedText} mb-8 max-w-prose`}>
-        I build interactive web apps using React, Next.js, and TypeScript. 
+        I build interactive web apps using React, Next.js, and JavaScript. 
         With a focus on UI design and performance, I aim to create 
         digital experiences that feel as timeless as print.
       </p>
