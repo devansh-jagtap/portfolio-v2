@@ -44,6 +44,7 @@ export const PROJECTS: Project[] = [
       "JWT",
       "AES-256-GCM"
     ],
+    imageUrl:"/keydrops/keydrops.png",
     demoUrl: "https://keydrops.tech",
     codeUrl: "https://github.com/devansh-jagtap/keydrop",
     featured: true,
@@ -68,6 +69,187 @@ export const PROJECTS: Project[] = [
       "Integrating Prisma 7 with Neon serverless Postgres configuration"
     ]
   },
+   {
+    slug: "appliquo",
+    title: "Appliquo AI - Job Application ",
+    description:
+      "A modern job application and tracking platform for organizing job searches efficiently.",
+    longDescription:
+      "Appliquo is a web application designed to help users manage and track their job applications in one place. The platform focuses on usability and clarity, allowing users to record application details, statuses, and notes while maintaining a clean and intuitive interface.",
+    techStack: ["React.js", "Javascript", "Tailwind CSS"],
+    imageUrl: "/appliquo.png",
+    demoUrl: "https://appliquo.vercel.app/",
+    codeUrl: "https://github.com/devansh-jagtap/Appliquo",
+    featured: true,
+    category: "Productivity",
+    ctaText: "View Project",
+    ctaLink: "",
+    features: [
+      "Track job applications and statuses",
+      "Clean and minimal dashboard interface",
+      "Organized view for applications and notes"
+    ],
+    highlights: [
+      "Focused on solving a real personal productivity problem",
+      "Designed with scalability for future features"
+    ],
+    challenges: [
+      "Designing a simple yet flexible data structure for applications",
+      "Balancing minimal UI with useful functionality"
+    ]
+  },
+  {
+  slug: "lumen",
+  title: "Lumen AI Workspace",
+  description:
+    "A multi-assistant AI workspace that provides specialized AI assistants, model routing, streaming conversations, and persistent chat sessions across multiple LLM providers.",
+  longDescription:
+    "Lumen is a modern AI workspace built with Next.js that brings multiple specialized AI assistants into a single application. Users can switch between dedicated assistants for coding, education, content creation, productivity, image generation, and video workflows while selecting from free and premium language models. The platform supports real-time streaming responses, multi-provider model routing, persistent local chat history, and a clean, responsive interface designed for everyday AI productivity.",
+  techStack: [
+    "Next.js 16",
+    "React 19",
+    "TypeScript",
+    "Tailwind CSS",
+    "Vercel AI SDK",
+    "AI SDK React",
+    "Google Gemini",
+    "Groq",
+    "OpenRouter",
+    "Cerebras",
+    "NVIDIA AI",
+    "shadcn/ui"
+  ],
+  imageUrl: "/lumen.png",
+  demoUrl: "",
+  codeUrl: "",
+  featured: true,
+  category: "AI Platform",
+  ctaText: "Explore Project",
+  ctaLink: "",
+  features: [
+    "Multiple specialized AI assistants",
+    "Real-time streaming AI responses",
+    "Provider and model switching",
+    "Support for free and premium LLMs",
+    "Persistent local chat history",
+    "Modern responsive chat interface",
+    "AI SDK powered streaming",
+    "Extensible assistant architecture"
+  ],
+  highlights: [
+    "Unified multiple AI providers behind a single conversational interface",
+    "Implemented provider routing across Google, Groq, OpenRouter, Cerebras, and NVIDIA AI",
+    "Built reusable assistant workflows with streaming responses and session persistence"
+  ],
+  challenges: [
+    "Managing multiple AI providers through a unified abstraction layer",
+    "Maintaining consistent streaming behavior across different LLM APIs",
+    "Designing a scalable architecture for adding new assistants and models"
+  ]
+},
+  {
+  slug: "opencontributers",
+  title: "OpenContributers",
+  description:
+    "An open-source habit-building platform that delivers curated GitHub issues to developers daily, making consistent open source contributions simple and sustainable.",
+  longDescription:
+    "OpenContributers is a full-stack developer platform designed to help developers build a consistent open-source contribution habit. Users authenticate with GitHub, subscribe to repositories they care about, and receive personalized daily emails containing actionable GitHub issues. The platform automates repository synchronization, issue tracking, email delivery, and background job processing using a scalable queue architecture with Redis and BullMQ.",
+  techStack: [
+    "Next.js 16",
+    "TypeScript",
+    "PostgreSQL",
+    "Prisma",
+    "NextAuth.js",
+    "Redis",
+    "BullMQ",
+    "Upstash",
+    "Neon",
+    "Resend",
+    "Tailwind CSS",
+    "GitHub API",
+    "Vercel"
+  ],
+  imageUrl: "/opencontributer.png",
+  demoUrl: "https://opencontributers.vercel.app",
+  codeUrl: "https://github.com/devansh-jagtap/openContributers",
+  featured: true,
+  category: "Developer Tools",
+  ctaText: "View Project",
+  ctaLink: "https://opencontributers.vercel.app",
+  features: [
+    "GitHub OAuth authentication with NextAuth.js",
+    "Subscribe to repositories and receive personalized issue recommendations",
+    "Automated GitHub issue synchronization every 6 hours",
+    "Timezone-aware daily email digests",
+    "Redis + BullMQ background job processing",
+    "Email verification workflow before digest delivery",
+    "Scalable PostgreSQL database with Prisma ORM",
+    "Production-ready deployment across Vercel and dedicated worker services"
+  ],
+  highlights: [
+    "Designed a scalable architecture separating the web application from long-running background workers",
+    "Integrated GitHub API, Redis, BullMQ, Prisma, Neon PostgreSQL, and Resend into a production-ready workflow",
+    "Implemented automated scheduling, email delivery, and queue-based processing for reliable daily notifications"
+  ],
+  challenges: [
+    "Building reliable background workers outside Vercel's serverless environment",
+    "Managing timezone-aware scheduling for global users",
+    "Keeping GitHub issue data synchronized efficiently while minimizing API usage",
+    "Designing fault-tolerant queue processing with retry mechanisms"
+  ]
+},
+{
+  slug: "rag-next",
+  title: "rag-next AI Knowledge Workspace",
+  description:
+    "An AI-powered knowledge workspace that transforms PDFs, books, research papers, and documentation into an interactive AI mentor using Retrieval-Augmented Generation (RAG).",
+  longDescription:
+    "rag_next is a full-stack AI knowledge platform that enables users to upload documents and interact with them through grounded, context-aware conversations. The application goes beyond traditional 'Chat with PDF' tools by supporting multi-document workspaces, persistent conversations, semantic search, query rewriting, and intelligent retrieval. Built on a modern RAG architecture, it extracts text, generates embeddings, stores vectors in Pinecone, retrieves relevant context, and produces citation-backed responses using large language models. The long-term vision is to evolve into an AI-powered learning, research, and productivity workspace capable of teaching concepts, generating quizzes, comparing research papers, creating study plans, and assisting with interview preparation.",
+  techStack: [
+    "Next.js 16",
+    "TypeScript",
+    "Python",
+    "Prisma",
+    "PostgreSQL",
+    "Pinecone",
+    "Google Gemini",
+    "Vercel AI SDK",
+    "PDF Processing",
+    "Vector Embeddings",
+    "Tailwind CSS"
+  ],
+  imageUrl: "/projects/rag_next.png",
+  demoUrl: "",
+  codeUrl: "",
+  featured: true,
+  category: "AI Platform",
+  ctaText: "Explore Project",
+  ctaLink: "",
+  features: [
+    "Upload and manage multiple PDF documents",
+    "Semantic document chunking and vector embedding generation",
+    "Multi-document Retrieval-Augmented Generation (RAG)",
+    "Query rewriting for improved retrieval accuracy",
+    "Conversation-aware follow-up questions",
+    "Persistent workspaces with chat history",
+    "Automatic chat title generation",
+    "Citation-backed AI responses with source references",
+    "Document management with upload and deletion support",
+    "Scalable Pinecone vector database integration"
+  ],
+  highlights: [
+    "Built a production-style end-to-end RAG pipeline from document ingestion to grounded AI responses",
+    "Implemented multi-document semantic retrieval with persistent AI workspaces",
+    "Designed the platform around an AI Knowledge Workspace vision instead of a traditional 'Chat with PDF' application",
+    "Engineered an extensible architecture for future learning, research, and tutoring capabilities"
+  ],
+  challenges: [
+    "Designing efficient document chunking strategies while preserving semantic meaning",
+    "Balancing retrieval accuracy with LLM context window limitations",
+    "Managing multi-document indexing and workspace organization",
+    "Maintaining conversation context while generating grounded, citation-backed responses"
+  ]
+},
   {
     slug: "roi-makers-website",
     title: "ROI Makers Website",
@@ -100,34 +282,97 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    slug: "appliquo",
-    title: "Appliquo",
-    description:
-      "A modern job application and tracking platform for organizing job searches efficiently.",
-    longDescription:
-      "Appliquo is a web application designed to help users manage and track their job applications in one place. The platform focuses on usability and clarity, allowing users to record application details, statuses, and notes while maintaining a clean and intuitive interface.",
-    techStack: ["React.js", "Javascript", "Tailwind CSS"],
-    imageUrl: "/appliquo.png",
-    demoUrl: "https://appliquo.vercel.app/",
-    codeUrl: "https://github.com/devansh-jagtap/Appliquo",
-    featured: true,
-    category: "Productivity",
-    ctaText: "View Project",
-    ctaLink: "",
-    features: [
-      "Track job applications and statuses",
-      "Clean and minimal dashboard interface",
-      "Organized view for applications and notes"
-    ],
-    highlights: [
-      "Focused on solving a real personal productivity problem",
-      "Designed with scalability for future features"
-    ],
-    challenges: [
-      "Designing a simple yet flexible data structure for applications",
-      "Balancing minimal UI with useful functionality"
-    ]
-  },
+  slug: "quid-invoice-generator",
+  title: "Quid Invoice Generator",
+  description:
+    "A modern full-stack SaaS application for creating, managing, and exporting professional invoices with secure authentication and PDF generation.",
+  longDescription:
+    "Quid Invoice Generator is a production-style invoicing platform built with Next.js App Router and Prisma. Users can securely authenticate using Google OAuth, create professional invoices, manage them through a personalized dashboard, preview invoices before saving, and export them as high-quality PDF documents. The application follows a modular feature-based architecture with reusable UI components, secure API routes, and a PostgreSQL-backed database.",
+  techStack: [
+    "Next.js 14",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL",
+    "NextAuth.js",
+    "Tailwind CSS",
+    "shadcn/ui",
+    "jsPDF",
+    "html-to-image",
+    "Lucide React"
+  ],
+  imageUrl: "/quid.png",
+  demoUrl: "https://quid-dev.vercel.app/",
+  codeUrl: "",
+  featured: true,
+  category: "SaaS",
+  ctaText: "View Project",
+  ctaLink: "",
+  features: [
+    "Google OAuth authentication with NextAuth.js",
+    "Create, edit, and manage invoices",
+    "Dynamic invoice pages with unique URLs",
+    "Professional invoice preview before export",
+    "PDF generation using jsPDF",
+    "Dashboard for managing invoices",
+    "PostgreSQL database with Prisma ORM",
+    "Responsive modern UI built with Tailwind CSS and shadcn/ui"
+  ],
+  highlights: [
+    "Built a complete CRUD-based SaaS application using Next.js App Router",
+    "Implemented secure authentication and database-backed invoice management",
+    "Designed a scalable feature-based architecture for maintainability and future expansion"
+  ],
+  challenges: [
+    "Generating pixel-perfect PDF invoices from HTML layouts",
+    "Managing authentication and protected routes with NextAuth.js",
+    "Designing reusable invoice components while maintaining consistent layouts"
+  ]
+},
+ {
+  slug: "select-to-speak",
+  title: "Select to Speak",
+  description:
+    "A privacy-first Chrome extension that reads selected text aloud using a fully offline local text-to-speech engine powered by Piper TTS.",
+  longDescription:
+    "Select to Speak is a Chrome extension that transforms any selected text on a webpage into natural-sounding speech without relying on cloud APIs or internet connectivity after setup. The extension communicates with a local FastAPI server running Piper TTS, enabling fast, private, and low-latency speech synthesis while ensuring that no user data ever leaves the device.",
+  techStack: [
+    "JavaScript",
+    "Chrome Extension API",
+    "Python",
+    "FastAPI",
+    "Piper TTS",
+    "Uvicorn",
+    "HTML",
+    "CSS"
+  ],
+  imageUrl: "/projects/select-to-speak.png",
+  demoUrl: "",
+  codeUrl: "",
+  featured: true,
+  category: "Developer Tools",
+  ctaText: "View Project",
+  ctaLink: "",
+  features: [
+    "Offline text-to-speech using Piper TTS",
+    "Floating toolbar for selected webpage text",
+    "Speak, pause, resume, and stop controls",
+    "FastAPI backend for local audio synthesis",
+    "Works completely offline after initial setup",
+    "Cross-platform support for Windows, macOS, and Linux",
+    "No external APIs or subscriptions required",
+    "Privacy-first architecture with local processing"
+  ],
+  highlights: [
+    "Built a Chrome extension integrated with a local AI inference server",
+    "Implemented fully offline speech synthesis with zero cloud dependency",
+    "Designed a lightweight architecture that prioritizes user privacy and low latency"
+  ],
+  challenges: [
+    "Connecting browser extension APIs with a local FastAPI service",
+    "Streaming synthesized audio with minimal playback delay",
+    "Managing local model downloads and cross-platform compatibility"
+  ]
+},
   {
     slug: "lyricstype",
     title: "LyricsType",
