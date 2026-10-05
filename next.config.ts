@@ -10,6 +10,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Old resume links (shared before the rename) still reach the current resume
+  async redirects() {
+    return [
+      {
+        source: '/devansh_draft_resume.pdf',
+        destination: '/Devansh_Jagtap_Resume.pdf',
+        permanent: true,
+      },
+    ];
+  },
   reactCompiler: true,
   serverExternalPackages: ["keydrop"]
 };
