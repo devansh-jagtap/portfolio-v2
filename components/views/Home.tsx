@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import GitHubGraph from '../GitHubGraph';
-import { Project } from '../../types';
+import { Project, BlogPost } from '../../types';
 import NameBanner from '../home/NameBanner';
 import Intro from '../home/Intro';
 import Profile from '../home/Profile';
 import LiveWork from '../home/LiveWork';
 import FeaturedProjects from '../home/FeaturedProjects';
+import LatestWriting from '../home/LatestWriting';
 import Skills from '../home/Skills';
 import Education from '../home/Education';
 import { EMAIL, PHONE } from '../../constants';
@@ -16,7 +17,8 @@ interface HomeProps {
   mutedText: string;
   isDark: boolean;
   handleProjectClick: (project: Project) => void;
-  handleNav: (view: 'projects' | 'experience') => void;
+  handleBlogClick: (blog: BlogPost) => void;
+  handleNav: (view: 'projects' | 'experience' | 'blog') => void;
 }
 
 const Home: React.FC<HomeProps> = ({ 
@@ -24,6 +26,7 @@ const Home: React.FC<HomeProps> = ({
   mutedText, 
   isDark, 
   handleProjectClick, 
+  handleBlogClick,
   handleNav 
 }) => {
   return (
@@ -66,6 +69,14 @@ const Home: React.FC<HomeProps> = ({
                   isDark={isDark} 
                   handleProjectClick={handleProjectClick} 
                   handleNav={handleNav} 
+                />
+
+                {/* Latest Blog Posts */}
+                <LatestWriting
+                  borderClass={borderClass}
+                  mutedText={mutedText}
+                  handleBlogClick={handleBlogClick}
+                  handleNav={handleNav}
                 />
 
                 {/* GitHub Section */}
