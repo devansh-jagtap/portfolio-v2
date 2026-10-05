@@ -102,9 +102,11 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
                 <Monitor size={16} /> Live Demo
               </a>
             )}
-            <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className={`px-6 py-3 text-sm font-bold uppercase tracking-wider border ${isDark ? 'border-neutral-700 hover:bg-neutral-800' : 'border-neutral-300 hover:bg-neutral-200'} transition-colors flex items-center gap-2`}>
-              <Github size={16} /> Code
-            </a>
+            {project.codeUrl && (
+              <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className={`px-6 py-3 text-sm font-bold uppercase tracking-wider border ${isDark ? 'border-neutral-700 hover:bg-neutral-800' : 'border-neutral-300 hover:bg-neutral-200'} transition-colors flex items-center gap-2`}>
+                <Github size={16} /> Code
+              </a>
+            )}
           </div>
         </div>
 
