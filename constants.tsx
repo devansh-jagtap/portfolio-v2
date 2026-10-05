@@ -13,15 +13,27 @@ export const SOCIALS: Social[] = [
 
 export const EXPERIENCE: Experience[] = [
   {
-    company: "ROI Makers",
-    role: "Freelance Frontend Developer & Website Creator",
-    date: "Oct 2025 – Present",
+    company: "MGR Developers",
+    role: "Freelance Web Developer",
+    date: "Sep 2026 – Present",
     location: "Indore, India",
     description: [
-      "Designed and developed the agency’s public website using Next.js and deployed it on Vercel.",
-      "Built responsive layouts for Projects, Approach, About, Career, Blog, and Contact sections ensuring consistent brand experience.",
-      "Integrated client assets, messaging, and links to social profiles for seamless agency representation online.",
-      "Improved site performance, SEO fundamentals, and mobile responsiveness for better visibility and engagement."
+      "Designed and built the official website for MGR Developers (Madhur Infrastructure Pvt Ltd), a real estate developer in Indore, using Next.js 16, TypeScript, and Tailwind CSS.",
+      "Built a dedicated page for their Sahaj Broadway commercial project with a floor-plan viewer, image gallery, project video, amenities, and location details.",
+      "Connected the enquiry forms to a Google Sheet through a secured Apps Script webhook so every lead reaches the sales team.",
+      "Set up SEO with per-page metadata, Open Graph previews, JSON-LD structured data, a sitemap, and robots rules."
+    ]
+  },
+  {
+    company: "ROI Makers",
+    role: "Frontend Engineering Intern",
+    date: "Sep 2025 – Feb 2026",
+    location: "Remote",
+    description: [
+      "Worked as sole frontend developer and built a complete business website from scratch using Next.js and TypeScript with no existing codebase to build on.",
+      "Achieved a 90+ Lighthouse performance score and reduced page load time by 40% using SSG, lazy loading, and image optimization techniques.",
+      "Handled client communication independently and delivered responsive, production-ready UI across desktop and mobile platforms.",
+      "Built responsive layouts for Projects, Approach, About, Career, Blog, and Contact sections ensuring consistent brand experience."
     ]
   }
 ];
@@ -251,6 +263,56 @@ export const PROJECTS: Project[] = [
   ]
 },
   {
+    slug: "mgr-developers-website",
+    title: "MGR Developers Website",
+    description:
+      "Official website for MGR Developers, an Indore real estate developer, with a dedicated showcase for their Sahaj Broadway commercial project.",
+    longDescription:
+      "Designed and developed the website for MGR Developers (Madhur Infrastructure Pvt Ltd), a real estate developer in Indore. Alongside the company pages (home, about, projects, contact), the site gives their flagship commercial project, Sahaj Broadway on AB Road, its own page: renders, an interactive floor-plan viewer, gallery, project video, amenities, specifications, and location. Enquiry forms on both brands save leads straight to a Google Sheet, and every page ships with full SEO metadata and structured data.",
+    techStack: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Motion",
+      "Radix UI",
+      "Google Apps Script",
+      "JSON-LD"
+    ],
+    imageUrl: "/mgr/mgr-home.jpg",
+    screenshots: [
+      { url: "/mgr/sahaj-broadway.jpg", alt: "Sahaj Broadway project page" },
+      { url: "/mgr/gallery.jpg", alt: "Sahaj Broadway gallery" },
+      { url: "/mgr/location.jpg", alt: "Sahaj Broadway location section" },
+      { url: "/mgr/enquiry-form.jpg", alt: "Enquiry form" }
+    ],
+    demoUrl: "https://mgrgroup.co",
+    codeUrl: "",
+    featured: true,
+    category: "Client Work",
+    ctaText: "View Live Site",
+    ctaLink: "https://mgrgroup.co",
+    features: [
+      "Company site with home, about, projects, and contact pages",
+      "Dedicated Sahaj Broadway project page with renders, gallery, and project video",
+      "Interactive floor-plan viewer with deep links to each floor",
+      "Enquiry forms saved to a Google Sheet via a secured Apps Script webhook",
+      "Floating WhatsApp and call buttons on every page",
+      "Intro splash animation and site-wide background audio with a remembered mute choice",
+      "Per-page metadata, Open Graph images, JSON-LD, sitemap, and robots rules"
+    ],
+    highlights: [
+      "Built and shipped a production website for a real estate client",
+      "Kept all project copy and figures in typed content files so pages update from one place",
+      "Self-hosted brand fonts so nothing is fetched from a font service at runtime"
+    ],
+    challenges: [
+      "Presenting two brands (MGR Developers and Sahaj Broadway) on one site with separate navigation and footers",
+      "Protecting the enquiry sheet from spreadsheet formula injection in form input",
+      "Keeping a media-heavy site fast with optimized images, and video and audio that load only when needed"
+    ]
+  },
+  {
     slug: "roi-makers-website",
     title: "ROI Makers Website",
     description:
@@ -273,6 +335,7 @@ export const PROJECTS: Project[] = [
     ],
     highlights: [
       "Built and deployed a real client website used for business presence",
+      "Achieved a 90+ Lighthouse performance score and cut page load time by 40% with SSG, lazy loading, and image optimization",
       "Focused on clarity, branding, and performance",
       "Production-ready Next.js deployment on Vercel"
     ],
@@ -560,7 +623,7 @@ export const EDUCATION = {
   institution: "Chameli Devi Group of Institutions (CDGI)",
   degree: "B.Tech in Computer science Engineering",
   location: "Indore, India",
-  duration: "Aug. 2022 – July 2026"
+  duration: "Aug 2022 – May 2026"
 };
 
 export const BLOG_POSTS: BlogPost[] = [

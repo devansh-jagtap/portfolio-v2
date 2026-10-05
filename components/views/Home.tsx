@@ -5,6 +5,7 @@ import { Project } from '../../types';
 import NameBanner from '../home/NameBanner';
 import Intro from '../home/Intro';
 import Profile from '../home/Profile';
+import LiveWork from '../home/LiveWork';
 import FeaturedProjects from '../home/FeaturedProjects';
 import Skills from '../home/Skills';
 import Education from '../home/Education';
@@ -50,8 +51,16 @@ const Home: React.FC<HomeProps> = ({
                     <Profile borderClass={borderClass} mutedText={mutedText} handleNav={handleNav} />
                 </div>
 
+                {/* Live Client Work */}
+                <LiveWork
+                  borderClass={borderClass}
+                  mutedText={mutedText}
+                  isDark={isDark}
+                  handleProjectClick={handleProjectClick}
+                />
+
                 {/* Featured Projects Grid */}
-                <FeaturedProjects 
+                <FeaturedProjects
                   borderClass={borderClass} 
                   mutedText={mutedText} 
                   isDark={isDark} 
