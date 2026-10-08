@@ -67,7 +67,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({
                 md:columns-2 gap-12
                 ${isDark ? 'text-neutral-300' : 'text-neutral-800'}
             `}>
-                <div className="first-letter:float-left first-letter:text-7xl first-letter:pr-4 first-letter:font-serif first-letter:font-bold first-letter:leading-none first-letter:mt-[-6px]">
+                <div className="[&>p]:mb-6 [&>p]:leading-relaxed first-letter:float-left first-letter:text-7xl first-letter:pr-4 first-letter:font-serif first-letter:font-bold first-letter:leading-none first-letter:mt-[-6px]">
                     {blog.content}
                 </div>
             </article>
