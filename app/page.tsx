@@ -72,6 +72,7 @@ export default function Page() {
             mutedText={mutedText}
             isDark={isDark}
             handleProjectClick={handleProjectClick}
+            handleBlogClick={handleBlogClick}
             handleNav={handleNav}
           />
         )}

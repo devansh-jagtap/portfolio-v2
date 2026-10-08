@@ -2,7 +2,6 @@ import React from 'react';
 import { Project, Experience, Social, SkillCategory, BlogPost, PlaygroundItem } from './types';
 
 export const EMAIL = "devanshjagtap2@gmail.com";
-export const PHONE = "+91 9755952227";
 
 export const SOCIALS: Social[] = [
   { name: "GitHub", link: "https://github.com/devansh-jagtap", label: "@devansh-jagtap" },
@@ -627,6 +626,82 @@ export const EDUCATION = {
 };
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: "4",
+    title: "The Most Important Feature Was a Spreadsheet",
+    slug: "most-important-feature-was-a-spreadsheet",
+    date: "Oct 05, 2026",
+    readTime: "3 min",
+    tags: ["Client Work", "Engineering"],
+    excerpt:
+      "Notes from building a real estate developer’s website: the parts that mattered most were rarely the parts I expected.",
+    content: (
+      <>
+        <p>
+          I recently built the website for MGR Developers, a real estate
+          developer in Indore, along with a full page for their commercial
+          project, Sahaj Broadway. I went in thinking about animations, image
+          carousels, and an interactive floor-plan viewer. I came out thinking
+          about spreadsheets.
+        </p>
+        <p>
+          A real estate website exists for one reason: so that someone who
+          likes a building can tell the sales team. Everything else supports
+          that moment. So the enquiry form was the feature that had to be
+          right, and the real question was not how it looked but where the
+          enquiries should go.
+        </p>
+        <p>
+          The obvious developer answer is a database and an admin dashboard.
+          But a dashboard is one more login for a sales team to remember and
+          one more screen to learn. Every enquiry instead lands as a new row in
+          a Google Sheet, through a small Apps Script web app protected by a
+          shared secret. Each form gets its own tab, and the sheet can be
+          downloaded as Excel at any time. The least impressive option was the
+          most useful one.
+        </p>
+        <p>
+          Even a spreadsheet hides edge cases. A sheet treats any cell starting
+          with an equals sign, a plus, a minus, or an at sign as a formula, and
+          a phone number written as +91 starts with a plus. So every value that begins
+          with one of those characters is saved as plain text. A hidden field
+          that only bots fill in quietly filters out spam, and the form still
+          submits when JavaScript fails to load, returning a simple
+          confirmation page instead of a broken button.
+        </p>
+        <p>
+          The second lesson was about content. A real estate site makes
+          promises: a RERA number, floor areas, a location, a phone number. It
+          is tempting to fill empty sections with polished placeholder copy so
+          the pages look finished. I chose the opposite. All of the project
+          copy comes from the official website and brochure, and where the
+          company’s own details were still missing, the code holds a clearly
+          marked gap instead of an invented sentence. A page that says less is
+          better than a page that says something untrue.
+        </p>
+        <p>
+          The third lesson was about budget. The brand’s headings use Stereo
+          Gothic, a paid typeface. Instead of licensing it for the web, I used
+          Michroma, the closest free match, with the same wide letters and the
+          same squared-off O, C, and G. Both fonts are bundled with the site,
+          so no font service is called when a visitor opens a page.
+        </p>
+        <p>
+          The rest was small decisions that only matter when you imagine a real
+          visitor. WhatsApp and call buttons sit on every page, and WhatsApp
+          opens with a message already written. Background music plays across
+          the site but stays silent on the project page, where the video plays
+          instead, and a visitor who mutes it stays muted on their next visit.
+        </p>
+        <p>
+          Side projects teach you how to build things. Client work teaches you
+          who you are building them for. The best feature on this site is not
+          the one I would show in a demo. It is the one that puts a buyer in
+          touch with the sales team.
+        </p>
+      </>
+    ),
+  },
   {
     id: "1",
     title: "Why Most Side Projects Die Quietly",
