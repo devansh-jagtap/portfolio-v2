@@ -10,7 +10,7 @@ import FeaturedProjects from '../home/FeaturedProjects';
 import LatestWriting from '../home/LatestWriting';
 import Skills from '../home/Skills';
 import Education from '../home/Education';
-import { EMAIL, PHONE } from '../../constants';
+import { EMAIL } from '../../constants';
 
 interface HomeProps {
   borderClass: string;
@@ -96,12 +96,6 @@ const Home: React.FC<HomeProps> = ({
                       Email:{' '}
                       <a href={`mailto:${EMAIL}`} className="underline text-purple-600 dark:text-purple-400">
                         {EMAIL}
-                      </a>
-                    </span>
-                    <span>
-                      Phone:{' '}
-                      <a href={`tel:${PHONE}`} className="underline text-purple-600 dark:text-purple-400">
-                        {PHONE}
                       </a>
                     </span>
                   </div>

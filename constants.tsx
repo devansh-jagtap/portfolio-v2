@@ -2,7 +2,6 @@ import React from 'react';
 import { Project, Experience, Social, SkillCategory, BlogPost, PlaygroundItem } from './types';
 
 export const EMAIL = "devanshjagtap2@gmail.com";
-export const PHONE = "+91 9755952227";
 
 export const SOCIALS: Social[] = [
   { name: "GitHub", link: "https://github.com/devansh-jagtap", label: "@devansh-jagtap" },
