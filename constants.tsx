@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project, Experience, Social, SkillCategory, BlogPost, PlaygroundItem } from './types';
+import { Project, Experience, Social, SkillCategory, BlogPost, PlaygroundItem, OpenSourceContribution } from './types';
 
 export const EMAIL = "devanshjagtap2@gmail.com";
 
@@ -37,6 +37,129 @@ export const EXPERIENCE: Experience[] = [
   }
 ];
 export const PROJECTS: Project[] = [
+  {
+    slug: "intent0",
+    title: "intent0",
+    description:
+      "An intent-driven layer for websites that turns visitor requests and AI agent queries into approved, actionable experiences.",
+    longDescription:
+      "intent0 makes websites intent-driven. Visitors and AI agents can describe what they want, while the platform builds the right page from approved tasks and answers questions from the site's own content with citations. It connects guided task flows, site-aware answers, MCP, and WebMCP without replacing the site's existing APIs.",
+    techStack: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "MCP",
+      "WebMCP",
+      "AI Agents"
+    ],
+    demoUrl: "",
+    codeUrl: "https://github.com/devansh-jagtap/intent0",
+    featured: true,
+    category: "AI & Developer Tools",
+    ctaText: "View on GitHub",
+    ctaLink: "https://github.com/devansh-jagtap/intent0",
+    features: [
+      "Intent-driven task pages for approved website actions",
+      "Cited answers from a site's own content",
+      "MCP and WebMCP support for AI agents",
+      "Works with existing website APIs",
+      "CLI workflow for initialization, indexing, and approval"
+    ],
+    highlights: [
+      "Designed around user intent instead of fixed navigation paths",
+      "Keeps task execution constrained to approved site capabilities",
+      "Supports both human visitors and AI agents through the same foundation"
+    ],
+    challenges: [
+      "Mapping existing routes and forms into reliable, reviewable tasks",
+      "Keeping generated experiences grounded in the site's source content",
+      "Providing a safe fallback to the original website when a generated flow fails"
+    ]
+  },
+  {
+    slug: "flowcraft",
+    title: "Flowcraft",
+    description:
+      "An AI diagramming workspace that turns plain language into editable flowcharts, mind maps, ER diagrams, and UML diagrams.",
+    longDescription:
+      "Flowcraft lets people describe a diagram in plain words and get a clean, editable result in seconds. It supports multiple diagram types, conversational refinement, hand-editable diagram text, automatic layout, sharing, exports, and encrypted bring-your-own AI keys.",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "AI SDK",
+      "Gemini",
+      "Clerk",
+      "Dagre"
+    ],
+    demoUrl: "https://flowcraft-eight.vercel.app",
+    codeUrl: "https://github.com/devansh-jagtap/Flowcraft",
+    featured: true,
+    category: "AI Platform",
+    ctaText: "View Live App",
+    ctaLink: "https://flowcraft-eight.vercel.app",
+    features: [
+      "Prompt-to-diagram generation",
+      "Flowcharts, mind maps, org charts, ER, and UML diagrams",
+      "Chat-based refinement with undo support",
+      "Editable diagram syntax with live preview",
+      "PNG and SVG exports",
+      "Encrypted AI key management and usage tracking"
+    ],
+    highlights: [
+      "Made diagram creation accessible to people who prefer writing over dragging nodes",
+      "Combined AI generation with a hand-editable source format",
+      "Added validation and automatic retry for malformed diagram output"
+    ],
+    challenges: [
+      "Supporting several diagram grammars behind one writing experience",
+      "Keeping generated diagrams valid, connected, and visually readable",
+      "Balancing guest access, free usage, and bring-your-own-key workflows"
+    ]
+  },
+  {
+    slug: "cortex",
+    title: "Cortex",
+    description:
+      "A local-first desktop app for searching personal photos by meaning, with semantic search, maps, and a visual knowledge graph.",
+    longDescription:
+      "Cortex is a privacy-first desktop application that helps people search their own photo libraries by meaning instead of filename. It indexes files locally, uses OpenCLIP and FAISS for semantic search, preserves the original files, and adds map, metadata, event, and look-alike photo views without uploading the library to the cloud.",
+    techStack: [
+      "Electron",
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "OpenCLIP",
+      "FAISS",
+      "SQLite"
+    ],
+    demoUrl: "",
+    codeUrl: "https://github.com/devansh-jagtap/cortex",
+    featured: true,
+    category: "Local AI",
+    ctaText: "View on GitHub",
+    ctaLink: "https://github.com/devansh-jagtap/cortex",
+    features: [
+      "Meaning-based search for personal photos",
+      "Local OpenCLIP embeddings with FAISS",
+      "Incremental indexing and filesystem watching",
+      "Map view for geotagged photos",
+      "Knowledge graph for places, scenes, and events",
+      "Galaxy view for visually similar photos"
+    ],
+    highlights: [
+      "Keeps AI processing and the photo library on the user's machine",
+      "Indexes changes incrementally without modifying original files",
+      "Combines search, metadata, maps, and visual relationships in one desktop workspace"
+    ],
+    challenges: [
+      "Coordinating an Electron, Next.js, and FastAPI desktop architecture",
+      "Building a responsive semantic search experience over a growing local index",
+      "Adding rich photo relationships while preserving a non-destructive workflow"
+    ]
+  },
   {
     slug: "keydrop",
     title: "KeyDrop Secrets Management CLI Tool",
@@ -550,6 +673,27 @@ export const PROJECTS: Project[] = [
       "Designing a flexible README structure",
       "Balancing simplicity with customization"
     ]
+  }
+];
+
+export const OPEN_SOURCE_CONTRIBUTIONS: OpenSourceContribution[] = [
+  {
+    name: "Better Stack",
+    handle: "@better-stack-ai",
+    description: "Contributing to open-source tools for modern developer workflows and observability.",
+    link: "https://github.com/better-stack-ai"
+  },
+  {
+    name: "Clerk",
+    handle: "@clerk",
+    description: "Contributing to open-source authentication and user-management tooling for developers.",
+    link: "https://github.com/clerk"
+  },
+  {
+    name: "Lingdojo",
+    handle: "@lingdojo",
+    description: "Contributing to open-source language-learning software and developer experiences.",
+    link: "https://github.com/lingdojo"
   }
 ];
 
