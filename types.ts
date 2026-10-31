@@ -77,6 +77,13 @@ export interface Social {
   label: string;
 }
 
+export interface OpenSourceContribution {
+  name: string;
+  handle: string;
+  description: string;
+  link: string;
+}
+
 export interface PlaygroundItem {
   id: string;
   title: string;

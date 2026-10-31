@@ -10,6 +10,7 @@ import FeaturedProjects from '../home/FeaturedProjects';
 import LatestWriting from '../home/LatestWriting';
 import Skills from '../home/Skills';
 import Education from '../home/Education';
+import OpenSourceContributions from '../home/OpenSourceContributions';
 import { EMAIL } from '../../constants';
 
 interface HomeProps {
@@ -87,6 +88,12 @@ const Home: React.FC<HomeProps> = ({
                     </div>
                     <GitHubGraph />
                   </div>
+
+                <OpenSourceContributions
+                  borderClass={borderClass}
+                  mutedText={mutedText}
+                  isDark={isDark}
+                />
 
                 {/* Contact Details */}
                 <div className={`p-6 md:p-8 border-b ${borderClass}`}>
